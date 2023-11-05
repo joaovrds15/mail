@@ -1,0 +1,122 @@
+textarea {
+    min-height: 400px;
+}
+
+#nav-buttons {
+    display: inline-block;
+}
+
+.email-view-heading {
+    font-size: 16px;
+    display: inline;
+}
+
+#email-body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    text-align: left;
+    color: rgba(83, 84, 86, 1);
+    max-width: 25vw;
+}
+
+#reply-text, #archive-text {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 9px;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(100, 103, 108, 1);
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+#reply-button, #archive-button {
+    cursor: pointer;
+    display: inline-block;
+    border:1px solid;
+    width: 105px;
+    height: 34px;
+    border-radius: 20px;
+    color: rgba(189, 189, 189, 1);
+}
+
+#inside-div-logo {
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.compose-container {
+    display: flex;
+    align-items: center;
+}
+
+#compose {
+    height: 50px;
+    width: 124px;
+    background-color:rgba(195, 231, 255, 1);
+    border-radius: 16px;
+}
+
+#compose:hover {
+    cursor: pointer;
+}
+
+#compose-icon, #compose-text {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#compose-icon {
+    margin-left: 10px;
+    margin-right: 18px;
+}
+
+#compose-text {
+    margin-top: 15px;
+}
+
+.material-symbols-outlined {
+    display: inline-block;
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 10px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.nav-buttons {
+    font-family: 'Roboto';
+    font-weight: bold;
+    display: block;
+    margin: 5px;
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+    border: none;
+    width: 213px;
+    height: 28px;
+}
+
+.nav-buttons:focus {
+    outline: none;
+    background-color: rgba(211, 227, 253, 1);
+}
+
+.nav-buttons:hover{
+    background-color: lightgrey;
+}
+
+#logout-button {
+    text-decoration: none;
+    color: black;
+    background-color: #efefef;
+    text-align: center;
+}
+
+#three-bar-icon {
+    margin-right: 8px;
+    cursor: pointer;
+}

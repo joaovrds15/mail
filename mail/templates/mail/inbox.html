@@ -1,0 +1,98 @@
+{% extends "mail/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+        <div>
+            <div id="inside-div-logo">
+                <svg id="three-bar-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="black" fill-opacity="0.54"/>
+                </svg>
+                
+                <svg width="109" height="40" viewBox="0 0 109 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="109" height="40" fill="url(#pattern0)"/>
+                    <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_502_3548" transform="scale(0.00917431 0.025)"/>
+                    </pattern>
+                    <image id="image0_502_3548" width="109" height="40" xlink:href="data:image/png;base64,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"/>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <h2 id="user-email">{{ request.user.email }}</h2>
+
+    <div id="side-div">
+
+        <div id="compose" class="compose-container">
+            <svg id="compose-icon" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.6903 4.06061L12.6838 4.99586L3.0864 14.0101H2.11397V13.0947L11.6903 4.06061ZM13.467 0C13.2028 0 12.928 0.0994949 12.7271 0.288535L10.7928 2.10929L14.7565 5.84035L16.6908 4.0196C17.1031 3.63157 17.1031 2.98485 16.6908 2.61672L14.2175 0.288535C14.0061 0.0895454 13.7418 0 13.467 0ZM11.6903 1.2648L0 12.2689V16H3.9637L15.654 4.99586L11.6903 1.2648Z" fill="black"/>
+            </svg>
+                
+            <p id="compose-text">Compose</p>
+        </div>
+        <button class="nav-buttons" id="inbox">Inbox</button>
+        <button class="nav-buttons" id="sent">Sent</button>
+        <button class="nav-buttons" id="archived">Archived</button>
+
+        <a class="nav-buttons" id="logout-button" href="{% url 'logout' %}">Log Out</a>
+    </div>
+
+    <div id="emails-view">
+    </div>
+
+    <div id ="email-view">
+        <div class="email-data">
+            <p class="email-view-heading"> <b>From: </b></p>
+            <p id="email-sender" class="email-view-heading"></p>
+        </div>
+        <div class="email-data">
+            <p class="email-view-heading"> <b>To: </b> </p>
+            <p id="email-recipients" class="email-view-heading"></p>
+        </div>
+        <div class="email-data">
+            <p class="email-view-heading"><b>Subject: </b></p>
+            <p id="email-subject" class="email-view-heading"></p>
+        </div>
+        <div class="email-data">
+            <p class="email-view-heading"><b>Timestamp: </b></p>
+            <p id="email-timestamp" class="email-view-heading"></p>
+        </div>
+
+        <hr>
+        <p id="email-body"></p>
+
+        <input type="hidden" id="email-id">
+
+        <div id="reply-button">
+            <span class="material-symbols-outlined">reply</span>
+            <p id="reply-text">Reply</p>
+        </div>
+
+        <div id="archive-button">
+            <p id="archive-text">Archive</p>
+        </div>
+    </div>
+
+    <div id="compose-view">
+        <h3>New Email</h3>
+        <form id="compose-form">
+            <div class="form-group">
+                From: <input disabled class="form-control" value="{{ request.user.email }}">
+            </div>
+            <div class="form-group">
+                To: <input id="compose-recipients" class="form-control">
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="compose-subject" placeholder="Subject">
+            </div>
+            <textarea class="form-control" id="compose-body" placeholder="Body"></textarea>
+            <input type="submit" class="btn btn-primary"/>
+        </form>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'mail/inbox.js' %}"></script>
+{% endblock %}
