@@ -125,7 +125,7 @@ function reply_email() {
   let finalBody = "On " + emailTimestamp + " " + emailSender + " wrote: " + emailBody;
 
   document.querySelector('#compose-recipients').value = emailSender;
-  document.querySelector('#compose-subject').value = emailSubject.substring(0, 4) == 'Re: ' ? emailSubject : 'Re: ' + emailSubject;
+  document.querySelector('#compose-subject').value = emailSubject.startsWith('Re: ') ? emailSubject : 'Re: ' + emailSubject;
   document.querySelector('#compose-body').value = finalBody;
 
   document.querySelector('#emails-view').style.display = 'none';
