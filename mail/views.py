@@ -126,6 +126,7 @@ def email(request, email_id):
             "error": "GET or PUT request required."
         }, status=400)
 
+MAILREGISTER = "mail/register.html"
 
 def login_view(request):
     if request.method == "POST":
@@ -160,7 +161,7 @@ def register(request):
         password = request.POST["password"]
         confirmation = request.POST["confirmation"]
         if password != confirmation:
-            return render(request, "mail/register.html", {
+            return render(request, MAILREGISTER, {
                 "message": "Passwords must match."
             })
 
@@ -170,10 +171,10 @@ def register(request):
             user.save()
         except IntegrityError as e:
             print(e)
-            return render(request, "mail/register.html", {
+            return render(request, MAILREGISTER, {
                 "message": "Email address already taken."
             })
         login(request, user)
         return HttpResponseRedirect(reverse("index"))
     else:
-        return render(request, "mail/register.html")
+        return render(request, MAILREGISTER)
