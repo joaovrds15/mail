@@ -89,7 +89,7 @@ textarea {
 }
 
 .nav-buttons {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     display: block;
     margin: 5px;
