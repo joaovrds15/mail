@@ -74,7 +74,6 @@ def compose(request):
 
 @login_required
 def mailbox(request, mailbox):
-
     # Filter emails returned based on mailbox
     if mailbox == "inbox":
         emails = Email.objects.filter(
