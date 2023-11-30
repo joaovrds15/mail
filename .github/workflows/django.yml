@@ -28,7 +28,6 @@ jobs:
       working-directory: .
     - name: Run Tests
       run: |
-        export SECRET_KEY=$DJANGO_SECRET_KEY
         coverage run -m pytest
         coverage report
       working-directory: .
