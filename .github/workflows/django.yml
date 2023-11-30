@@ -31,5 +31,5 @@ jobs:
         coverage run -m pytest
         coverage report
       env:
-        SECRET_KEY: django-insecure-_en0g=9jjr+c*@v-%95#zp5$f$ip^0#&dlhmcjgn7vu+p(=$vq
+        SECRET_KEY: ${{secrets.SECRET_KEY}}
       working-directory: .
