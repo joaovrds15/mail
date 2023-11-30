@@ -28,8 +28,9 @@ jobs:
       working-directory: .
     - name: Run Tests
       run: |
+        export SECRET_KEY=$DJANGO_SECRET_KEY
         coverage run -m pytest
         coverage report
-      env:
-        SECRET_KEY: ${{secrets.SECRET_KEY}}
       working-directory: .
+      env:
+        SECRET_KEY: ${{ secrets.SECRET_KEY }}
