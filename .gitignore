@@ -1,1 +1,2 @@
-project3/settings.py
+project3/.env
+*/__pycache__/*
