@@ -7,6 +7,7 @@ from django.test import RequestFactory
 from django.contrib.auth.models import AnonymousUser
 from django.urls import reverse
 from django.test import TestCase
+from django.contrib.sessions.middleware import SessionMiddleware
 from django.shortcuts import HttpResponse, HttpResponseRedirect
 
 from mail.models import Email, User
@@ -171,5 +172,23 @@ def test_mail_login_user_doesnt_exist():
     }
 
     request = RequestFactory().post('/login', data)
+    response = login_view(request)
+    assert isinstance(response, HttpResponse)
+
+@pytest.mark.django_db
+def test_mail_login_ok():
+    user = User.objects.create_user(username='email@example.com', password='testpassword', email='email@example.com')
+    data = {
+        'email': 'email@example.com',
+        'password': 'testpassword'
+    }
+
+    # Create a request with a session using SessionMiddleware
+    request = RequestFactory().post('/login', data)
+    middleware = SessionMiddleware(request)
+    middleware.process_request(request)
+    request.session['cycle_key'] = 'testcyclekey'
+    request.user = user
+
     response = login_view(request)
     assert isinstance(response, HttpResponse)
