@@ -36,6 +36,7 @@ jobs:
 
     - name: Install Cypress
       run: |
+        python manage.py runserver
         npm install cypress
       working-directory: .
     - name: Run Cypress Tests
