@@ -38,10 +38,15 @@ jobs:
       run: |
         npm install cypress
       working-directory: .
-    - name: Run Cypress Tests
+
+    - name: Start Django Server
       run: |
         python manage.py runserver
-        npx cypress run
-      working-directory: .
+        sleep 5 # Wait for the server to start
       env:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
+      working-directory: .
+    - name: Run Cypress Tests
+      run: |
+        npx cypress run
+      working-directory: .
