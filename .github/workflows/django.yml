@@ -43,3 +43,5 @@ jobs:
       run: |
         npx cypress run
       working-directory: .
+      env:
+        SECRET_KEY: ${{ secrets.SECRET_KEY }}
