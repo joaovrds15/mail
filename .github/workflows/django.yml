@@ -33,3 +33,12 @@ jobs:
       working-directory: .
       env:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
+
+    - name: Install Cypress
+      run: |
+        npm install cypress
+      working-directory: .
+    - name: Run Cypress Tests
+      run: |
+        npx cypress run
+      working-directory: .
