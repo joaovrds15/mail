@@ -41,7 +41,7 @@ jobs:
 
     - name: Start Django Server
       run: |
-        python manage.py runserver
+        python manage.py runserver &
         sleep 5 # Wait for the server to start
       env:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
